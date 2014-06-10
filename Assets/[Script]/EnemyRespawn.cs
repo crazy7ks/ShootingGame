@@ -13,10 +13,13 @@ public class EnemyRespawn : MonoBehaviour
     public float m_fMinX;
     public float m_fMaxX;
 
+    public int m_iMaxHP;
+
 	void Start () 
     {
         m_fMinX = transform.position.x - renderer.bounds.size.x / 2;
         m_fMaxX = transform.position.x + renderer.bounds.size.x / 2;
+        EnemyObject.m_stMaxHP = m_iMaxHP;
 	}
 
 	void Update () 

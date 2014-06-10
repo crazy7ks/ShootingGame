@@ -16,6 +16,7 @@ public class FiredBullet : MonoBehaviour
     {
         if (Input.GetKey(m_firedKey) && Time.time > m_fFiredDelay)
         {
+
             m_fFiredDelay = Time.time + m_fDelayTime;
             GameObject bullet = Instantiate(m_bulletPrefap, transform.position, transform.rotation) as GameObject;
             bullet.rigidbody.AddForce(transform.TransformDirection(new Vector3(0, 0, 1) * m_fBulletSpeed));
